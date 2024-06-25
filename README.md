@@ -1,5 +1,5 @@
 # loan-eligiblity-prediction-
-Importing Necessary libraries:
+#Importing Necessary libraries:
 
 import numpy as np 
 import pandas as pd 
@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-Load and import data
+#Load and import data
 train = pd.read_csv("train_ctrUa4K.csv")
 test = pd.read_csv("test_lAUu6dG.csv")
 train_original = train.copy()
@@ -42,7 +42,7 @@ train["Loan_Status"].value_counts(normalize = True).reset_index()
 
 
   
-Data Visulisation:
+#Data Visulisation:
 train['Loan_Status'].value_counts(normalize = True).plot.bar()
     
 
@@ -266,7 +266,7 @@ sns.heatmap(matrix, vmax=0.8, cmap="YlOrBr", square=True)
 
 
 
-Missing value Imputation:
+#Missing value Imputation:
 train.isnull().sum()
 
 
@@ -342,7 +342,7 @@ model.fit(x_train, y_train)
     
 
 
-Prediction and Accuracy:
+#Prediction and Accuracy:
 
 pred_cv = model.predict(x_cv)
 
